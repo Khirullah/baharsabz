@@ -1,0 +1,437 @@
+﻿<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+  <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<script type="module" src="js/recived.js"></script>
+<script type="module" src="js/owner.js"></script>
+<script type="module" src="js/spend.js"></script>
+    <title>Clint Side</title>
+    <style>
+        textarea {
+            width: 50%;
+            height: 150px;
+            padding: 12px 20px;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            background-color: #f8f8f8;
+            resize: none;
+        }
+
+        ul {
+            list-style-type: none;
+            margin-bottom: -5%;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+			margin-top: -1%;
+			
+        }
+
+        li {
+            float: left;
+        }
+
+            li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+                li a:hover {
+                    background-color: black;
+                }
+
+                li a:active {
+                    background-color: black;
+                }
+
+
+        .container {
+            margin-top: 10%;
+            margin-left: 10%;
+            width: 80%;
+            height: 80%;
+            background: #f4dabf;
+            border-radius: 1rem;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+        }
+		table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    width: 100%;
+	height: 100%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+}
+input[type="button"], input[type="submit"]{
+  background-color: #36A9AE;
+  background-image: linear-gradient(#37ADB2, #329CA0);
+  border: 1px solid #2A8387;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0 1px 1px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: block;
+  font-family: -apple-system,".SFNSDisplay-Regular","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 17px;
+  line-height: 100%;
+  margin: 0;
+  outline: 0;
+  padding: 11px 15px 12px;
+    margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  transition: box-shadow .05s ease-in-out,opacity .05s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 50%;
+}
+
+
+    </style>
+</head>
+
+<body>
+
+    <ul>
+        <li><a id="recived" href="#">Recived</a></li>
+        <li><a id="owner_recived" href="#">Owner Recived</a></li>
+        <li><a id="spend" href="#">Spend</a></li>
+    </ul>
+
+
+    <div class="container">
+        <div class="recived">
+		<div id='see'></div>
+            <h2>پول از دکاندار گرفته شده</h2>
+            <form action="#">
+                <label for="shop">اسم دکاندار</label>
+				<input id="shop" name="shops">
+                <br>
+                <br>
+                <label for="date">تاریخ:</label>
+                <select id="shop_day" name="shop_day">
+                    <option value="1">01</option>
+                    <option value="2">02</option>
+                    <option value="3">03</option>
+                    <option value="4">04</option>
+                    <option value="5">05</option>
+                    <option value="6">06</option>
+                    <option value="7">07</option>
+                    <option value="8">08</option>
+                    <option value="9">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                    <option value="31">31</option>
+                </select>
+                <select id="shop_month" name="shop_month">
+                    <option value="1">01</option>
+                    <option value="2">02</option>
+                    <option value="3">03</option>
+                    <option value="4">04</option>
+                    <option value="5">05</option>
+                    <option value="6">06</option>
+                    <option value="7">07</option>
+                    <option value="8">08</option>
+                    <option value="9">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+                <select id="shop_year" name="shop_year">
+                    <option value="1403">1403</option>
+                    <option value="1404">1404</option>
+                    <option value="1405">1405</option>
+                </select>
+                <br>
+                <br>
+                <input  type="text" id="shop_money" placeholder="مقدار تحول داده شده">
+                <br>
+                <br>
+                <input type="button" id="shop_btn" value="تایید">
+				
+	<div id="" style="overflow:scroll; height:330px;">
+		<table>
+			<thead>
+				<th>No</th>
+				<th>name</th>
+				<th>date</th>
+				<th>money</th>
+				<th>is</th>
+	
+			</thead>
+			<tbody id="tbody1">
+	
+	
+			</tbody>
+
+		</table>
+				
+	</div>		
+
+            </form>
+        </div>
+
+
+
+
+        <div class="owner_recived">
+
+            <h2>پول رسیده شده برای مالک جایدات</h2>
+            <form action="#">
+                <label for="date">تاریخ:</label>
+                <select id="owner_day" name="owner_day">
+                    <option value="1">01</option>
+                    <option value="2">02</option>
+                    <option value="3">03</option>
+                    <option value="4">04</option>
+                    <option value="5">05</option>
+                    <option value="6">06</option>
+                    <option value="7">07</option>
+                    <option value="8">08</option>
+                    <option value="9">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                    <option value="31">31</option>
+                </select>
+                <select id="owner_month" name="owner_month">
+                    <option value="1">01</option>
+                    <option value="2">02</option>
+                    <option value="3">03</option>
+                    <option value="4">04</option>
+                    <option value="5">05</option>
+                    <option value="6">06</option>
+                    <option value="7">07</option>
+                    <option value="8">08</option>
+                    <option value="9">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+                <select id="owner_year" name="owner_year">
+                    <option value="1403">1403</option>
+                    <option value="1404">1404</option>
+                    <option value="1405">1405</option>
+                </select>
+                <br>
+                <br>
+                <input type="text" id="owner_money" placeholder="مقدار تحول داده شده">
+                <br>
+                <br>
+                <input type="button" id="owner_btn" value="تایید">
+               
+
+	<div id="" style="overflow:scroll; height:330px;">
+		<table>
+			<thead>
+				<th>No</th>
+				<th>date</th>
+				<th>money</th>
+				<th>is</th>
+	
+			</thead>
+			<tbody id="tbody2">
+	
+	
+			</tbody>
+
+		</table>
+				
+	</div>	
+
+            </form>
+        </div>
+
+
+
+
+        <div class="spend">
+            <h2>مصارف</h2>
+            <form action="#">
+                <label for="date">تاریخ</label>
+                <select id="spend_day" name="spend_day">
+                    <option value="1">01</option>
+                    <option value="2">02</option>
+                    <option value="3">03</option>
+                    <option value="4">04</option>
+                    <option value="5">05</option>
+                    <option value="6">06</option>
+                    <option value="7">07</option>
+                    <option value="8">08</option>
+                    <option value="9">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                    <option value="31">31</option>
+                </select>
+                <select id="spend_month" name="spend_month">
+                    <option value="1">01</option>
+                    <option value="2">02</option>
+                    <option value="3">03</option>
+                    <option value="4">04</option>
+                    <option value="5">05</option>
+                    <option value="6">06</option>
+                    <option value="7">07</option>
+                    <option value="8">08</option>
+                    <option value="9">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+                <select id="spend_year" name="spend_year">
+                    <option value="1403">1403</option>
+                    <option value="1404">1404</option>
+                    <option value="1405">1405</option>
+                </select>
+                <br>
+                <br>
+                <input id="spend_money" type="text" placeholder="مقدار پول">
+                <br>
+                <br>
+                <textarea id="info" type="text" placeholder="معلومات پول مصرف شده"></textarea>
+                <input id="spend_btn" type="button" value="تایید">
+	<div id="" style="overflow:scroll; height:330px;">
+		<table>
+			<thead>
+				<th>No</th>
+				<th>info</th>
+				<th>date</th>
+				<th>money</th>
+				<th>is</th>
+	
+			</thead>
+			<tbody id="tbody3">
+	
+	
+			</tbody>
+
+		</table>
+				
+	</div>	
+            </form>
+        </div>
+    </div>
+
+
+
+    <script type="module">
+
+        const recived = document.querySelector('.recived');
+        const owner_recived = document.querySelector('.owner_recived');
+        const spend = document.querySelector('.spend');
+        const anchors = document.querySelectorAll('a');
+        recived.style.display = 'block';
+        owner_recived.style.display = 'none';
+        spend.style.display = 'none';
+        anchors.forEach(anchor => {
+            anchor.addEventListener('click', () => {
+                const id = anchor.id;
+                switch (id) {
+                    case 'recived':
+                        recived.style.display = 'block';
+                        owner_recived.style.display = 'none';
+                        spend.style.display = 'none';
+                        //document.getElementById('back').style.visibility = 'visible';
+
+                        break;
+                    case 'owner_recived':
+                        recived.style.display = 'none';
+                        owner_recived.style.display = 'block';
+                        spend.style.display = 'none';
+                        //document.getElementById('back').style.visibility = 'visible';
+                        break;
+
+                    case 'spend':
+                        recived.style.display = 'none';
+                        owner_recived.style.display = 'none';
+                        spend.style.display = 'block';
+                        //document.getElementById('back').style.visibility = 'visible';
+                        break;
+                }
+            });
+        });
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

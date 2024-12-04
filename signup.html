@@ -1,0 +1,32 @@
+<head>
+    <meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Registration Form</title>
+	<script src="js/intlTelInput.min.js"></script>
+    <script type="module" src="js/signup.js"></script>
+	<link rel="stylesheet" href="style/styless.css">
+</head>
+
+<body>
+<div class="container">
+    <input type="checkbox" id="check">
+    <div class="login form">
+     <header>Register</header>
+    <form action="" method="POST" id="registrationform">
+            <input type="text" name="name" value="" id="name" placeholder="Enter your Name" required />
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="PhoneNumber" required />
+            <input type="email" name="email" value="" id="email"  placeholder="Enter your email" required />
+            <input type="password" name="password" value="" id="password" placeholder="Enter your password" required />
+            <button type="submit" sendMessage()>Register</button>
+    </form>
+		<div class="signup">
+        <span class="signup">I have an account.
+          <a href="login.html" id="signupLabel">login</a>
+        </span>
+      </div>
+    </div>
+
+</body>
+
+</html>
