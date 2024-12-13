@@ -6,8 +6,9 @@
   <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
-  <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script>
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<script type="module" src="js/recived.js"></script>
 <script type="module" src="js/owner.js"></script>
 <script type="module" src="js/spend.js"></script>
@@ -110,7 +111,8 @@ input[type="button"], input[type="submit"]{
 </head>
 
 <body>
-
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+	
     <ul>
         <li><a id="recived" href="#">گرفته شده</a></li>
         <li><a id="owner_recived" href="#">رسیده به صاحب جایدات</a></li>
@@ -179,6 +181,11 @@ input[type="button"], input[type="submit"]{
                     <option value="1403">1403</option>
                     <option value="1404">1404</option>
                     <option value="1405">1405</option>
+                    <option value="1406">1406</option>
+                    <option value="1407">1407</option>
+                    <option value="1408">1408</option>
+                    <option value="1409">1409</option>
+                    <option value="1410">1410</option>
                 </select>
                 <br>
                 <br>
@@ -217,15 +224,15 @@ input[type="button"], input[type="submit"]{
             <form action="#">
                 <label for="date">تاریخ:</label>
                 <select id="owner_day" name="owner_day">
-                    <option value="1">01</option>
-                    <option value="2">02</option>
-                    <option value="3">03</option>
-                    <option value="4">04</option>
-                    <option value="5">05</option>
-                    <option value="6">06</option>
-                    <option value="7">07</option>
-                    <option value="8">08</option>
-                    <option value="9">09</option>
+                    <option value="01">01</option>
+                    <option value="02">02</option>
+                    <option value="03">03</option>
+                    <option value="04">04</option>
+                    <option value="05">05</option>
+                    <option value="06">06</option>
+                    <option value="07">07</option>
+                    <option value="08">08</option>
+                    <option value="09">09</option>
                     <option value="10">10</option>
                     <option value="11">11</option>
                     <option value="12">12</option>
@@ -250,15 +257,15 @@ input[type="button"], input[type="submit"]{
                     <option value="31">31</option>
                 </select>
                 <select id="owner_month" name="owner_month">
-                    <option value="1">01</option>
-                    <option value="2">02</option>
-                    <option value="3">03</option>
-                    <option value="4">04</option>
-                    <option value="5">05</option>
-                    <option value="6">06</option>
-                    <option value="7">07</option>
-                    <option value="8">08</option>
-                    <option value="9">09</option>
+                    <option value="01">01</option>
+                    <option value="02">02</option>
+                    <option value="03">03</option>
+                    <option value="04">04</option>
+                    <option value="05">05</option>
+                    <option value="06">06</option>
+                    <option value="07">07</option>
+                    <option value="08">08</option>
+                    <option value="09">09</option>
                     <option value="10">10</option>
                     <option value="11">11</option>
                     <option value="12">12</option>
@@ -267,6 +274,11 @@ input[type="button"], input[type="submit"]{
                     <option value="1403">1403</option>
                     <option value="1404">1404</option>
                     <option value="1405">1405</option>
+					<option value="1406">1406</option>
+                    <option value="1407">1407</option>
+                    <option value="1408">1408</option>
+                    <option value="1409">1409</option>
+                    <option value="1410">1410</option>
                 </select>
                 <br>
                 <br>
@@ -276,6 +288,11 @@ input[type="button"], input[type="submit"]{
                 <input type="button" id="owner_btn" value="تایید">
                
 
+				<!-- Modal -->
+
+
+            </form>
+			
 	<div id="" style="overflow:scroll; height:330px;">
 		<table>
 			<thead>
@@ -293,8 +310,6 @@ input[type="button"], input[type="submit"]{
 		</table>
 				
 	</div>	
-
-            </form>
         </div>
 
 
@@ -355,6 +370,11 @@ input[type="button"], input[type="submit"]{
                     <option value="1403">1403</option>
                     <option value="1404">1404</option>
                     <option value="1405">1405</option>
+                    <option value="1406">1406</option>
+                    <option value="1407">1407</option>
+                    <option value="1408">1408</option>
+                    <option value="1409">1409</option>
+                    <option value="1410">1410</option>
                 </select>
                 <br>
                 <br>
@@ -371,6 +391,7 @@ input[type="button"], input[type="submit"]{
 				<th>تاریخ</th>
 				<th>مقدار پول</th>
 				<th>تائید مالک جایدات</th>
+				
 	
 			</thead>
 			<tbody id="tbody3">
