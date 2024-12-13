@@ -1,9 +1,1 @@
-  const firebaseConfig = {
-  apiKey: "AIzaSyDRZWKsDOjfpksMngKvflSI4zG6KrC46XI",
-  authDomain: "rent-96032.firebaseapp.com",
-  databaseURL: "https://rent-96032-default-rtdb.asia-southeast1.firebasedatabase.app",
-  projectId: "rent-96032",
-  appId: "1:142602401003:web:b1130f353065e3af077aae",
-};
-
-export { firebaseConfig };
+const _0x54e72a=_0xe402;(function(_0x2c77a9,_0x439c36){const _0x416018=_0xe402,_0x30ccfc=_0x2c77a9();while(!![]){try{const _0x40de11=parseInt(_0x416018(0x1d6))/0x1*(-parseInt(_0x416018(0x1d2))/0x2)+parseInt(_0x416018(0x1da))/0x3*(parseInt(_0x416018(0x1d4))/0x4)+parseInt(_0x416018(0x1d7))/0x5+parseInt(_0x416018(0x1d9))/0x6*(parseInt(_0x416018(0x1d5))/0x7)+parseInt(_0x416018(0x1dc))/0x8*(-parseInt(_0x416018(0x1df))/0x9)+parseInt(_0x416018(0x1d8))/0xa+-parseInt(_0x416018(0x1db))/0xb;if(_0x40de11===_0x439c36)break;else _0x30ccfc['push'](_0x30ccfc['shift']());}catch(_0x5b3333){_0x30ccfc['push'](_0x30ccfc['shift']());}}}(_0x5b8e,0x3a1df));function _0xe402(_0x2a1b03,_0x165ba9){const _0x5b8e8f=_0x5b8e();return _0xe402=function(_0xe4023,_0x15fd81){_0xe4023=_0xe4023-0x1d1;let _0x5869a9=_0x5b8e8f[_0xe4023];return _0x5869a9;},_0xe402(_0x2a1b03,_0x165ba9);}function _0x5b8e(){const _0x46ace7=['144saKSpH','https://rent-96032-default-rtdb.asia-southeast1.firebasedatabase.app','rent-96032.firebaseapp.com','17793lQFfRW','AIzaSyDRZWKsDOjfpksMngKvflSI4zG6KrC46XI','2MkVKAx','rent-96032','4dZmrYi','14aCDfLN','396671fMjhet','2200090qiVHDg','3459150NUbAKY','255444RbMDpV','477699zmqPsL','3960110jjCEjH'];_0x5b8e=function(){return _0x46ace7;};return _0x5b8e();}const firebaseConfig={'apiKey':_0x54e72a(0x1d1),'authDomain':_0x54e72a(0x1de),'databaseURL':_0x54e72a(0x1dd),'projectId':_0x54e72a(0x1d3),'appId':'1:142602401003:web:b1130f353065e3af077aae'};export{firebaseConfig};
