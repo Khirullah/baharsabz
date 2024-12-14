@@ -12,6 +12,7 @@
 	<script type="module" src="js/recived.js"></script>
 <script type="module" src="js/owner.js"></script>
 <script type="module" src="js/spend.js"></script>
+<script type="module" src="js/client.js"></script>
     <title>Clint Side</title>
     <style>
         textarea {
@@ -411,52 +412,6 @@ input[type="button"], input[type="submit"]{
         </div>
     </div>
 
-
-
-    <script type="module">
-
-        const recived = document.querySelector('.recived');
-        const owner_recived = document.querySelector('.owner_recived');
-        const spend = document.querySelector('.spend');
-        const anchors = document.querySelectorAll('a');
-        recived.style.display = 'block';
-        owner_recived.style.display = 'none';
-        spend.style.display = 'none';
-        anchors.forEach(anchor => {
-            anchor.addEventListener('click', () => {
-                const id = anchor.id;
-                switch (id) {
-                    case 'recived':
-                        recived.style.display = 'block';
-                        owner_recived.style.display = 'none';
-                        spend.style.display = 'none';
-                        //document.getElementById('back').style.visibility = 'visible';
-
-                        break;
-                    case 'owner_recived':
-                        recived.style.display = 'none';
-                        owner_recived.style.display = 'block';
-                        spend.style.display = 'none';
-                        //document.getElementById('back').style.visibility = 'visible';
-                        break;
-
-                    case 'spend':
-                        recived.style.display = 'none';
-                        owner_recived.style.display = 'none';
-                        spend.style.display = 'block';
-                        //document.getElementById('back').style.visibility = 'visible';
-                        break;
-                }
-            });
-        });
-
-
-
-
-
-
-
-    </script>
 </body>
 
 </html>
