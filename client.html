@@ -12,7 +12,6 @@
 	<script type="module" src="js/recived.js"></script>
 <script type="module" src="js/owner.js"></script>
 <script type="module" src="js/spend.js"></script>
-<script type="module" src="js/client.js"></script>
     <title>Clint Side</title>
     <style>
         textarea {
@@ -59,9 +58,9 @@
 
         .container {
             margin-top: 10%;
-            margin-left: 5%;
-            width: 90%;
-            height: 90%;
+            margin-left: 10%;
+            width: 80%;
+            height: 80%;
             background: #f4dabf;
             border-radius: 1rem;
             box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
@@ -82,11 +81,6 @@ td, th {
   text-align: center;
   padding: 8px;
 }
-	    		h2{
-		text-align: center;
-		font-size: 2em;
-		font-family: sans-serif;
-		}
 input[type="button"], input[type="submit"]{
   background-color: #36A9AE;
   background-image: linear-gradient(#37ADB2, #329CA0);
@@ -130,7 +124,6 @@ input[type="button"], input[type="submit"]{
         <div class="recived">
 		<div id='see'></div>
             <h2>پول از دکاندار گرفته شده</h2>
-            <form action="#">
                 <label for="shop"></label>
 				<input id="shop" name="shops" placeholder="اسم دکاندار">
                 <br>
@@ -200,7 +193,7 @@ input[type="button"], input[type="submit"]{
                 <br>
                 <input type="button" id="shop_btn" value="تایید">
 				
-	<div id="" style="overflow:scroll; height:380px;">
+	<div id="" style="overflow:scroll; height:330px;">
 		<table>
 			<thead>
 				<th>No:</th>
@@ -217,105 +210,7 @@ input[type="button"], input[type="submit"]{
 		</table>
 				
 	</div>		
-
-            </form>
-        </div>
-
-
-
-
-        <div class="owner_recived">
-
-            <h2>پول رسیده به مالک جایدات</h2>
-                <label for="date">تاریخ:</label>
-                <select id="owner_day" name="owner_day">
-                    <option value="01">01</option>
-                    <option value="02">02</option>
-                    <option value="03">03</option>
-                    <option value="04">04</option>
-                    <option value="05">05</option>
-                    <option value="06">06</option>
-                    <option value="07">07</option>
-                    <option value="08">08</option>
-                    <option value="09">09</option>
-                    <option value="10">10</option>
-                    <option value="11">11</option>
-                    <option value="12">12</option>
-                    <option value="13">13</option>
-                    <option value="14">14</option>
-                    <option value="15">15</option>
-                    <option value="16">16</option>
-                    <option value="17">17</option>
-                    <option value="18">18</option>
-                    <option value="19">19</option>
-                    <option value="20">20</option>
-                    <option value="21">21</option>
-                    <option value="22">22</option>
-                    <option value="23">23</option>
-                    <option value="24">24</option>
-                    <option value="25">25</option>
-                    <option value="26">26</option>
-                    <option value="27">27</option>
-                    <option value="28">28</option>
-                    <option value="29">29</option>
-                    <option value="30">30</option>
-                    <option value="31">31</option>
-                </select>
-                <select id="owner_month" name="owner_month">
-                    <option value="01">01</option>
-                    <option value="02">02</option>
-                    <option value="03">03</option>
-                    <option value="04">04</option>
-                    <option value="05">05</option>
-                    <option value="06">06</option>
-                    <option value="07">07</option>
-                    <option value="08">08</option>
-                    <option value="09">09</option>
-                    <option value="10">10</option>
-                    <option value="11">11</option>
-                    <option value="12">12</option>
-                </select>
-                <select id="owner_year" name="owner_year">
-                    <option value="1403">1403</option>
-                    <option value="1404">1404</option>
-                    <option value="1405">1405</option>
-					<option value="1406">1406</option>
-                    <option value="1407">1407</option>
-                    <option value="1408">1408</option>
-                    <option value="1409">1409</option>
-                    <option value="1410">1410</option>
-                </select>
-                <br>
-                <br>
-                <input type="text" id="owner_money" placeholder="مقدار تحول داده شده">
-                <br>
-                <br>
-                <input type="button" id="owner_btn" value="تایید">
-               
-
-				<!-- Modal -->
-
-
-            
-			
-	<div id="" style="overflow:scroll; height:410px;">
-		<table>
-			<thead>
-				<th>No</th>
-				<th>تاریخ</th>
-				<th>مقدار پول</th>
-				<th>تائید مالک جایدات</th>
-	
-			</thead>
-			<tbody id="tbody2">
-	
-	
-			</tbody>
-
-		</table>
-				
-	</div>	
-		<div class="modal fade" id="actionModal" tabindex="-1" aria-labelledby="actionLabel" aria-hidden="true">
+	<div class="modal fade" id="actionModal" tabindex="-1" aria-labelledby="actionLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -414,6 +309,103 @@ input[type="button"], input[type="submit"]{
 
 
 
+        <div class="owner_recived">
+
+            <h2>پول رسیده شده برای مالک جایدات</h2>
+            <form action="#">
+                <label for="date">تاریخ:</label>
+                <select id="owner_day" name="owner_day">
+                    <option value="01">01</option>
+                    <option value="02">02</option>
+                    <option value="03">03</option>
+                    <option value="04">04</option>
+                    <option value="05">05</option>
+                    <option value="06">06</option>
+                    <option value="07">07</option>
+                    <option value="08">08</option>
+                    <option value="09">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                    <option value="31">31</option>
+                </select>
+                <select id="owner_month" name="owner_month">
+                    <option value="01">01</option>
+                    <option value="02">02</option>
+                    <option value="03">03</option>
+                    <option value="04">04</option>
+                    <option value="05">05</option>
+                    <option value="06">06</option>
+                    <option value="07">07</option>
+                    <option value="08">08</option>
+                    <option value="09">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+                <select id="owner_year" name="owner_year">
+                    <option value="1403">1403</option>
+                    <option value="1404">1404</option>
+                    <option value="1405">1405</option>
+					<option value="1406">1406</option>
+                    <option value="1407">1407</option>
+                    <option value="1408">1408</option>
+                    <option value="1409">1409</option>
+                    <option value="1410">1410</option>
+                </select>
+                <br>
+                <br>
+                <input type="text" id="owner_money" placeholder="مقدار تحول داده شده">
+                <br>
+                <br>
+                <input type="button" id="owner_btn" value="تایید">
+               
+
+				<!-- Modal -->
+
+
+            </form>
+			
+	<div id="" style="overflow:scroll; height:330px;">
+		<table>
+			<thead>
+				<th>No</th>
+				<th>تاریخ</th>
+				<th>مقدار پول</th>
+				<th>تائید مالک جایدات</th>
+	
+			</thead>
+			<tbody id="tbody2">
+	
+	
+			</tbody>
+
+		</table>
+				
+	</div>	
+        </div>
+
+
+
+
         <div class="spend">
             <h2>مصارف</h2>
             <form action="#">
@@ -459,7 +451,7 @@ input[type="button"], input[type="submit"]{
                     <option value="05">05</option>
                     <option value="06">06</option>
                     <option value="07">07</option>
-                    <option value="08">08</option>
+                    <option value="80">08</option>
                     <option value="09">09</option>
                     <option value="10">10</option>
                     <option value="11">11</option>
@@ -505,6 +497,65 @@ input[type="button"], input[type="submit"]{
         </div>
     </div>
 
+
+
+    <script type="module">
+import { onAuthStateChanged, getAuth} from "https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
+import { getDatabase, ref, set, child, get, onValue, push, update, query, orderByChild, onChildAdded, limitToFirst, limitToLast, 
+startAt, startAfter, endAt, endBefore, equalTo} from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
+import {firebaseConfig} from './js/config.js';
+const auth = firebase.auth();
+const firestore = firebase.firestore();
+        const recived = document.querySelector('.recived');
+        const owner_recived = document.querySelector('.owner_recived');
+        const spend = document.querySelector('.spend');
+        const anchors = document.querySelectorAll('a');
+        recived.style.display = 'block';
+        owner_recived.style.display = 'none';
+        spend.style.display = 'none';
+        anchors.forEach(anchor => {
+            anchor.addEventListener('click', () => {
+                const id = anchor.id;
+                switch (id) {
+                    case 'recived':
+                        recived.style.display = 'block';
+                        owner_recived.style.display = 'none';
+                        spend.style.display = 'none';
+                        //document.getElementById('back').style.visibility = 'visible';
+
+                        break;
+                    case 'owner_recived':
+                        recived.style.display = 'none';
+                        owner_recived.style.display = 'block';
+                        spend.style.display = 'none';
+                        //document.getElementById('back').style.visibility = 'visible';
+                        break;
+
+                    case 'spend':
+                        recived.style.display = 'none';
+                        owner_recived.style.display = 'none';
+                        spend.style.display = 'block';
+                        //document.getElementById('back').style.visibility = 'visible';
+                        break;
+                }
+            });
+        });
+		onAuthStateChanged(auth, (user) => {
+  if (user) {
+	  
+	  
+  }else{
+	   location.replace("./index.html");
+  }
+		})
+
+
+
+
+
+
+    </script>
 </body>
 
 </html>
