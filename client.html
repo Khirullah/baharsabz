@@ -60,7 +60,7 @@
             margin-top: 10%;
             margin-left: 5%;
             width: 90%;
-            height: 80%;
+            height: 90%;
             background: #f4dabf;
             border-radius: 1rem;
             box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
@@ -81,11 +81,6 @@ td, th {
   text-align: center;
   padding: 8px;
 }
-	    		h2{
-		text-align: center;
-		font-size: 2em;
-		font-family: sans-serif;
-		}
 input[type="button"], input[type="submit"]{
   background-color: #36A9AE;
   background-image: linear-gradient(#37ADB2, #329CA0);
@@ -109,6 +104,122 @@ input[type="button"], input[type="submit"]{
   -webkit-user-select: none;
   touch-action: manipulation;
   width: 50%;
+}
+
+#myInput {
+
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+/* From Uiverse.io by Madflows */ 
+.button {
+  position: relative;
+  overflow: hidden;
+  height: 2rem;
+  padding: 0 2rem;
+  border-radius: 1.5rem;
+  background: #36A9AE;
+  background-size: 400%;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover::before {
+  transform: scaleX(1);
+}
+
+.button-content {
+  position: relative;
+  z-index: 1;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  width: 100%;
+  height: inherit;
+  border-radius: inherit;
+  background: linear-gradient(
+    82.3deg,
+    rgba(150, 93, 233, 1) 10.8%,
+    rgba(99, 88, 238, 1) 94.3%
+  );
+  transition: all 0.475s;
+}
+#total{
+margin-bottom: -15px;
+margin-top: 10px;
+}
+#ototal{
+margin-bottom: -15px;
+margin-top: 10px;
+}
+#stotal{
+margin-bottom: -15px;
+margin-top: 10px;
+}
+.total {
+  list-style: none;
+  margin: 0;
+  overflow: hidden; 
+  padding: 0;
+}
+
+.total {
+  background: #eee;
+  border-radius: 3px 0 0 3px;
+  color: #183386;
+  display: inline-block;
+  font-weight: bold;
+  height: 26px;
+  line-height: 26px;
+  padding: 0 20px 0 23px;
+  position: relative;
+  margin: 0 10px 10px 0;
+  text-decoration: none;
+  -webkit-transition: color 0.2s;
+}
+
+.total::before {
+  background: #0077ff;
+  border-radius: 10px;
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
+  content: '';
+  height: 6px;
+  left: 10px;
+  position: absolute;
+  width: 6px;
+  top: 10px;
+}
+
+.total::after {
+  background: #0077ff;
+  border-bottom: 13px solid transparent;
+  border-left: 10px solid #eee;
+  border-top: 13px solid transparent;
+  content: '';
+  position: absolute;
+  left: 100%;
+  top: 0;
+}
+
+.total:hover {
+  background-color: #469681;
+  color: white;
+}
+
+.total:hover::after {
+   border-left-color: #469681; 
 }
 
 
@@ -197,11 +308,65 @@ input[type="button"], input[type="submit"]{
                 <br>
                 <br>
                 <input type="button" id="shop_btn" value="تایید">
+				<br>
+				    <select id="searchmonth">
+                    <option value="01">01</option>
+                    <option value="02">02</option>
+                    <option value="03">03</option>
+                    <option value="04">04</option>
+                    <option value="05">05</option>
+                    <option value="06">06</option>
+                    <option value="07">07</option>
+                    <option value="08">08</option>
+                    <option value="09">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+				    <select id="searchyear">
+                    <option value="1403">1403</option>
+                    <option value="1404">1404</option>
+                    <option value="1405">1405</option>
+                    <option value="1406">1406</option>
+                    <option value="1407">1407</option>
+                    <option value="1408">1408</option>
+                    <option value="1409">1409</option>
+                    <option value="1410">1410</option>
+                </select>
+				<button id="search" class="button">
+				<span class="button-content">فلتر </span>
+				</button>
+				<p id='total' class="total">مجموع پول جمع شده از دکاندار ها</p> 
+				<script>
+				function search() {
+				var input, filter, table, tr, td, i, txtValue;
+				var reset = document.getElementById("reset");
+				input = document.getElementById("searchmonth").value + '/' + document.getElementById("searchyear").value;
+				table = document.getElementById("myTable");
+				tr = table.getElementsByTagName("tr");
 				
-	<div id="" style="overflow:scroll; height:280px;">
-		<table>
+				for (i = 0; i < tr.length; i++) {
+					td = tr[i].getElementsByTagName("td")[2];
+					var sumVal = ''; 
+					if (td) {
+						txtValue = td.textContent || td.innerText;
+						if (txtValue.indexOf(input) > -1) {
+						tr[i].style.display = "";
+						
+					} else {
+						tr[i].style.display = "none";
+					}
+				
+    }       
+  }
+  
+
+}
+				</script>
+	<div id="" style="overflow:scroll; height:330px;">
+		<table id='myTable'>
 			<thead>
-				<th>No:</th>
+				<th>نمبر</th>
 				<th>اسم دکاندار</th>
 				<th>تاریخ</th>
 				<th>مقدار پول</th>
@@ -317,7 +482,6 @@ input[type="button"], input[type="submit"]{
         <div class="owner_recived">
 
             <h2>پول رسیده شده برای مالک جایدات</h2>
-            <form action="#">
                 <label for="date">تاریخ:</label>
                 <select id="owner_day" name="owner_day">
                     <option value="01">01</option>
@@ -382,17 +546,46 @@ input[type="button"], input[type="submit"]{
                 <br>
                 <br>
                 <input type="button" id="owner_btn" value="تایید">
+				<br>
+				<select id="osearchmonth">
+                    <option value="01">01</option>
+                    <option value="02">02</option>
+                    <option value="03">03</option>
+                    <option value="04">04</option>
+                    <option value="05">05</option>
+                    <option value="06">06</option>
+                    <option value="07">07</option>
+                    <option value="08">08</option>
+                    <option value="09">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+				    <select id="osearchyear">
+                    <option value="1403">1403</option>
+                    <option value="1404">1404</option>
+                    <option value="1405">1405</option>
+                    <option value="1406">1406</option>
+                    <option value="1407">1407</option>
+                    <option value="1408">1408</option>
+                    <option value="1409">1409</option>
+                    <option value="1410">1410</option>
+                </select>
+				<button id="osearch" class="button">
+				<span class="button-content">فلتر </span>
+				</button>
+				<p id='ototal' class="total">مجموع پول رسیده شده برای صاحب جایدات</p> 
+				
                
 
 				<!-- Modal -->
 
 
-            </form>
 			
-	<div id="" style="overflow:scroll; height:350px;">
+	<div id="" style="overflow:scroll; height:330px;">
 		<table>
 			<thead>
-				<th>No</th>
+				<th>نمبر</th>
 				<th>تاریخ</th>
 				<th>مقدار پول</th>
 				<th>تائید مالک جایدات</th>
@@ -413,7 +606,6 @@ input[type="button"], input[type="submit"]{
 
         <div class="spend">
             <h2>مصارف</h2>
-            <form action="#">
                 <label for="date">تاریخ</label>
                 <select id="spend_day" name="spend_day">
                     <option value="01">01</option>
@@ -479,10 +671,40 @@ input[type="button"], input[type="submit"]{
                 <br>
                 <textarea id="info" type="text" placeholder="معلومات پول مصرف شده"></textarea>
                 <input id="spend_btn" type="button" value="تایید">
-	<div id="" style="overflow:scroll; height:280px;">
+				<br>
+				<select id="ssearchmonth">
+                    <option value="01">01</option>
+                    <option value="02">02</option>
+                    <option value="03">03</option>
+                    <option value="04">04</option>
+                    <option value="05">05</option>
+                    <option value="06">06</option>
+                    <option value="07">07</option>
+                    <option value="08">08</option>
+                    <option value="09">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+				    <select id="ssearchyear">
+                    <option value="1403">1403</option>
+                    <option value="1404">1404</option>
+                    <option value="1405">1405</option>
+                    <option value="1406">1406</option>
+                    <option value="1407">1407</option>
+                    <option value="1408">1408</option>
+                    <option value="1409">1409</option>
+                    <option value="1410">1410</option>
+                </select>
+				<button id="ssearch" class="button">
+				<span class="button-content">فلتر </span>
+				</button>
+				<p id='stotal' class="total">مجموع پول خرج شده</p> 
+				
+	<div id="" style="overflow:scroll; height:330px;">
 		<table>
 			<thead>
-				<th>No</th>
+				<th>نمبر</th>
 				<th>معلومات</th>
 				<th>تاریخ</th>
 				<th>مقدار پول</th>
@@ -498,10 +720,8 @@ input[type="button"], input[type="submit"]{
 		</table>
 				
 	</div>	
-            </form>
         </div>
     </div>
-
 
 
     <script type="module">
