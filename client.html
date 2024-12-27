@@ -28,15 +28,21 @@
         ul {
             list-style-type: none;
             margin-bottom: -5%;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
             padding: 0;
             overflow: hidden;
             background-color: #333;
-			margin-top: -1%;
-			
+            margin-top: -1%;
         }
 
         li {
             float: left;
+            margin-left: 10px;
+            text-shadow: 0 1px rgba(0,0,0,.8);
+            background-color: #4D5B4E;
+            background-image: linear-gradient(rgba(255,255,255,.3), rgba(255,255,255,0));
+            box-shadow: 0 2px 0 rgba(0,0,0,.3);
         }
 
             li a {
@@ -45,14 +51,19 @@
                 text-align: center;
                 padding: 14px 16px;
                 text-decoration: none;
+               
             }
 
                 li a:hover {
                     background-color: black;
+                    text-decoration: none;
+                    color: white;
                 }
 
                 li a:active {
                     background-color: black;
+                    text-decoration: none;
+                    color: white;
                 }
 
 
@@ -64,23 +75,31 @@
             background: #f4dabf;
             border-radius: 1rem;
             box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+
         }
-		table {
-    border-collapse: collapse;
-    margin: 25px 0;
-    font-size: 0.9em;
-    font-family: sans-serif;
-    width: 100%;
-	height: 100%;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        table {
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 0.9em;
+            font-family: Arial, Helvetica, sans-serif;
+            width: 100%;
+            height: 100%;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.35);
+        }
+        th {
+            position: sticky;
+            top: -2;
+            background: #DFA66A;
+            background: -moz-linear-gradient(top, #DFA66A, FFFFFF);
+            background: -webkit-gradient(linear, left top, left bottom, from(#DFA66A), to(white));
+        }
 
-}
-
-td, th {
-  border: 1px solid #dddddd;
-  text-align: center;
-  padding: 8px;
-}
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: center;
+            padding: 8px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
 input[type="button"], input[type="submit"]{
   background-color: #36A9AE;
   background-image: linear-gradient(#37ADB2, #329CA0);
@@ -175,20 +194,21 @@ margin-top: 10px;
   padding: 0;
 }
 
-.total {
-  background: #eee;
-  border-radius: 3px 0 0 3px;
-  color: #183386;
-  display: inline-block;
-  font-weight: bold;
-  height: 26px;
-  line-height: 26px;
-  padding: 0 20px 0 23px;
-  position: relative;
-  margin: 0 10px 10px 0;
-  text-decoration: none;
-  -webkit-transition: color 0.2s;
-}
+        .total {
+            background: #eee;
+            border-radius: 3px 0 0 3px;
+            color: #183386;
+            display: inline-block;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            height: 26px;
+            line-height: 26px;
+            padding: 0 20px 0 23px;
+            position: relative;
+            margin: 0 10px 10px 0;
+            text-decoration: none;
+            -webkit-transition: color 0.2s;
+        }
 
 .total::before {
   background: #0077ff;
@@ -222,7 +242,39 @@ margin-top: 10px;
    border-left-color: #469681; 
 }
 
+        h2 {
+            text-align: center;
+            position: relative;
+            color: #fff;
+            margin: 0 -30px 30px -30px;
+            padding: 10px 0;
+            text-shadow: 0 1px rgba(0,0,0,.8);
+            background-color: #5c5c5c;
+            background-image: linear-gradient(rgba(255,255,255,.3), rgba(255,255,255,0));
+            box-shadow: 0 2px 0 rgba(0,0,0,.3);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 28px;
+        }
+        h2::before,
+        h2::after {
+            content: '';
+            position: absolute;
+            border-style: solid;
+            border-color: transparent;
+            bottom: -10px;
+        }
 
+        h2::before {
+            border-width: 0 10px 10px 0;
+            border-right-color: #222;
+            left: 0;
+        }
+
+        h2::after {
+            border-width: 0 0 10px 10px;
+            border-left-color: #222;
+            right: 0;
+        }
     </style>
 </head>
 
@@ -241,136 +293,49 @@ margin-top: 10px;
 		<div id='see'></div>
             <h2>پول از دکاندار گرفته شده</h2>
                 <label for="shop"></label>
-				<input id="shop" name="shops" placeholder="اسم دکاندار">
-                <br>
-                <br>
-                <label for="date">تاریخ:</label>
-                <select id="shop_day" name="shop_day">
-                    <option value="01">01</option>
-                    <option value="02">02</option>
-                    <option value="03">03</option>
-                    <option value="04">04</option>
-                    <option value="05">05</option>
-                    <option value="06">06</option>
-                    <option value="07">07</option>
-                    <option value="08">08</option>
-                    <option value="09">09</option>
-                    <option value="10">10</option>
-                    <option value="11">11</option>
-                    <option value="12">12</option>
-                    <option value="13">13</option>
-                    <option value="14">14</option>
-                    <option value="15">15</option>
-                    <option value="16">16</option>
-                    <option value="17">17</option>
-                    <option value="18">18</option>
-                    <option value="19">19</option>
-                    <option value="20">20</option>
-                    <option value="21">21</option>
-                    <option value="22">22</option>
-                    <option value="23">23</option>
-                    <option value="24">24</option>
-                    <option value="25">25</option>
-                    <option value="26">26</option>
-                    <option value="27">27</option>
-                    <option value="28">28</option>
-                    <option value="29">29</option>
-                    <option value="30">30</option>
-                    <option value="31">31</option>
-                </select>
-                <select id="shop_month" name="shop_month">
-                    <option value="01">01</option>
-                    <option value="02">02</option>
-                    <option value="03">03</option>
-                    <option value="04">04</option>
-                    <option value="05">05</option>
-                    <option value="06">06</option>
-                    <option value="07">07</option>
-                    <option value="08">08</option>
-                    <option value="09">09</option>
-                    <option value="10">10</option>
-                    <option value="11">11</option>
-                    <option value="12">12</option>
-                </select>
-                <select id="shop_year" name="shop_year">
-                    <option value="1403">1403</option>
-                    <option value="1404">1404</option>
-                    <option value="1405">1405</option>
-                    <option value="1406">1406</option>
-                    <option value="1407">1407</option>
-                    <option value="1408">1408</option>
-                    <option value="1409">1409</option>
-                    <option value="1410">1410</option>
-                </select>
-                <br>
-                <br>
-                <input  type="text" id="shop_money" placeholder="مقدار تحول داده شده">
-                <br>
-                <br>
-                <input type="button" id="shop_btn" value="تایید">
-				<br>
 				    <select id="searchmonth">
-                    <option value="01">01</option>
-                    <option value="02">02</option>
-                    <option value="03">03</option>
-                    <option value="04">04</option>
-                    <option value="05">05</option>
-                    <option value="06">06</option>
-                    <option value="07">07</option>
-                    <option value="08">08</option>
-                    <option value="09">09</option>
-                    <option value="10">10</option>
-                    <option value="11">11</option>
-                    <option value="12">12</option>
+                    <option value="01">۰۱</option>
+                    <option value="02">۰۲</option>
+                    <option value="03">۰۳</option>
+                    <option value="04">۰۴</option>
+                    <option value="05">۰۵</option>
+                    <option value="06">۰۶</option>
+                    <option value="07">۰۷</option>
+                    <option value="08">۰۸</option>
+                    <option value="09">۰۹</option>
+                    <option value="10">۱۰</option>
+                    <option value="11">۱۱</option>
+                    <option value="12">۱۲</option>
                 </select>
 				    <select id="searchyear">
-                    <option value="1403">1403</option>
-                    <option value="1404">1404</option>
-                    <option value="1405">1405</option>
-                    <option value="1406">1406</option>
-                    <option value="1407">1407</option>
-                    <option value="1408">1408</option>
-                    <option value="1409">1409</option>
-                    <option value="1410">1410</option>
+                    <option value="1403">۱۴۰۳</option>
+                    <option value="1404">۱۴۰۴</option>
+                    <option value="1405">۱۴۰۵</option>
+                    <option value="1406">۱۴۰۶</option>
+                    <option value="1407">۱۴۰۷</option>
+                    <option value="1408">۱۴۰۸</option>
+                    <option value="1409">۱۴۰۹</option>
+                    <option value="1410">۱۴۱۰</option>
                 </select>
 				<button id="search" class="button">
 				<span class="button-content">فلتر </span>
 				</button>
-				<p id='total' class="total">مجموع پول جمع شده از دکاندار ها</p> 
-				<script>
-				function search() {
-				var input, filter, table, tr, td, i, txtValue;
-				var reset = document.getElementById("reset");
-				input = document.getElementById("searchmonth").value + '/' + document.getElementById("searchyear").value;
-				table = document.getElementById("myTable");
-				tr = table.getElementsByTagName("tr");
-				
-				for (i = 0; i < tr.length; i++) {
-					td = tr[i].getElementsByTagName("td")[2];
-					var sumVal = ''; 
-					if (td) {
-						txtValue = td.textContent || td.innerText;
-						if (txtValue.indexOf(input) > -1) {
-						tr[i].style.display = "";
-						
-					} else {
-						tr[i].style.display = "none";
-					}
-				
-    }       
-  }
-  
 
-}
-				</script>
-	<div id="" style="overflow:scroll; height:330px;">
-		<table id='myTable'>
+				<p id='total' class="total">مجموع پول جمع شده از دکاندار ها</p> 
+            <br>
+            <br>
+            
+
+	<div id="" style="overflow:scroll; height:70%;">
+		<table id='myTable' >
 			<thead>
-				<th>نمبر</th>
 				<th>اسم دکاندار</th>
 				<th>تاریخ</th>
 				<th>مقدار پول</th>
-	
+                <th>
+                    <button class="btn btn-success ms-3" data-bs-toggle="modal" data-bs-target="#actionModal" id="add-0">
+                        <i class="fa-solid fa-plus"></i>
+                </th>
 			</thead>
 			<tbody id="tbody1">
 	
@@ -399,63 +364,63 @@ margin-top: 10px;
                             </div>
 							
                             <div class="mb-3">
-                                <label for="exampleFormControlInput1" class="form-label"></label>
+                                <label for="exampleFormControlInput1" class="form-label"></label>تاریخ    
                     <select id="sday" >
-                    <option value="01">01</option>
-                    <option value="02">02</option>
-                    <option value="03">03</option>
-                    <option value="04">04</option>
-                    <option value="05">05</option>
-                    <option value="06">06</option>
-                    <option value="07">07</option>
-                    <option value="08">08</option>
-                    <option value="09">09</option>
-                    <option value="10">10</option>
-                    <option value="11">11</option>
-                    <option value="12">12</option>
-                    <option value="13">13</option>
-                    <option value="14">14</option>
-                    <option value="15">15</option>
-                    <option value="16">16</option>
-                    <option value="17">17</option>
-                    <option value="18">18</option>
-                    <option value="19">19</option>
-                    <option value="20">20</option>
-                    <option value="21">21</option>
-                    <option value="22">22</option>
-                    <option value="23">23</option>
-                    <option value="24">24</option>
-                    <option value="25">25</option>
-                    <option value="26">26</option>
-                    <option value="27">27</option>
-                    <option value="28">28</option>
-                    <option value="29">29</option>
-                    <option value="30">30</option>
-                    <option value="31">31</option>
+                    <option value="01">۰۱</option>
+                    <option value="02">۰۲</option>
+                    <option value="03">۰۳</option>
+                    <option value="04">۰۴</option>
+                    <option value="05">۰۵</option>
+                    <option value="06">۰۶</option>
+                    <option value="07">۰۷</option>
+                    <option value="08">۰۸</option>
+                    <option value="09">۰۹</option>
+                    <option value="10">۱۰</option>
+                    <option value="11">۱۱</option>
+                    <option value="12">۱۲</option>
+                    <option value="13">۱۳</option>
+                    <option value="14">۱۴</option>
+                    <option value="15">۱۵</option>
+                    <option value="16">۱۶</option>
+                    <option value="17">۱۷</option>
+                    <option value="18">۱۸</option>
+                    <option value="19">۱۹</option>
+                    <option value="20">۲۰</option>
+                    <option value="21">۲۱</option>
+                    <option value="22">۲۲</option>
+                    <option value="23">۲۳</option>
+                    <option value="24">۲۴</option>
+                    <option value="25">۲۵</option>
+                    <option value="26">۲۶</option>
+                    <option value="27">۲۷</option>
+                    <option value="28">۲۸</option>
+                    <option value="29">۲۹</option>
+                    <option value="30">۳۰</option>
+                    <option value="31">۳۱</option>
                 </select>
                 <select id="smonth">
-                    <option value="01">01</option>
-                    <option value="02">02</option>
-                    <option value="03">03</option>
-                    <option value="04">04</option>
-                    <option value="05">05</option>
-                    <option value="06">06</option>
-                    <option value="07">07</option>
-                    <option value="08">08</option>
-                    <option value="09">09</option>
-                    <option value="10">10</option>
-                    <option value="11">11</option>
-                    <option value="12">12</option>
+                    <option value="01">۰۱</option>
+                    <option value="02">۰۲</option>
+                    <option value="03">۰۳</option>
+                    <option value="04">۰۴</option>
+                    <option value="05">۰۵</option>
+                    <option value="06">۰۶</option>
+                    <option value="07">۰۷</option>
+                    <option value="08">۰۸</option>
+                    <option value="09">۰۹</option>
+                    <option value="10">۱۰</option>
+                    <option value="11">۱۱</option>
+                    <option value="12">۱۲</option>
                 </select>
                 <select id="syear">
-                    <option value="1403">1403</option>
-                    <option value="1404">1404</option>
-                    <option value="1405">1405</option>
-                    <option value="1406">1406</option>
-                    <option value="1407">1407</option>
-                    <option value="1408">1408</option>
-                    <option value="1409">1409</option>
-                    <option value="1410">1410</option>
+                    <option value="1403">۱۴۰۳</option>
+                    <option value="1404">۱۴۰۴</option>
+                    <option value="1405">۱۴۰۵</option>
+                    <option value="1406">۱۴۰۶</option>
+                    <option value="1407">۱۴۰۷</option>
+                    <option value="1408">۱۴۰۸</option>
+                    <option value="1409">۱۴۰۹</option>
+                    <option value="1410">۱۴۱۰</option>
                 </select>
                             </div>
 							<div class="mb-3">
@@ -482,123 +447,150 @@ margin-top: 10px;
         <div class="owner_recived">
 
             <h2>پول رسیده شده برای مالک جایدات</h2>
-                <label for="date">تاریخ:</label>
-                <select id="owner_day" name="owner_day">
-                    <option value="01">01</option>
-                    <option value="02">02</option>
-                    <option value="03">03</option>
-                    <option value="04">04</option>
-                    <option value="05">05</option>
-                    <option value="06">06</option>
-                    <option value="07">07</option>
-                    <option value="08">08</option>
-                    <option value="09">09</option>
-                    <option value="10">10</option>
-                    <option value="11">11</option>
-                    <option value="12">12</option>
-                    <option value="13">13</option>
-                    <option value="14">14</option>
-                    <option value="15">15</option>
-                    <option value="16">16</option>
-                    <option value="17">17</option>
-                    <option value="18">18</option>
-                    <option value="19">19</option>
-                    <option value="20">20</option>
-                    <option value="21">21</option>
-                    <option value="22">22</option>
-                    <option value="23">23</option>
-                    <option value="24">24</option>
-                    <option value="25">25</option>
-                    <option value="26">26</option>
-                    <option value="27">27</option>
-                    <option value="28">28</option>
-                    <option value="29">29</option>
-                    <option value="30">30</option>
-                    <option value="31">31</option>
-                </select>
-                <select id="owner_month" name="owner_month">
-                    <option value="01">01</option>
-                    <option value="02">02</option>
-                    <option value="03">03</option>
-                    <option value="04">04</option>
-                    <option value="05">05</option>
-                    <option value="06">06</option>
-                    <option value="07">07</option>
-                    <option value="08">08</option>
-                    <option value="09">09</option>
-                    <option value="10">10</option>
-                    <option value="11">11</option>
-                    <option value="12">12</option>
-                </select>
-                <select id="owner_year" name="owner_year">
-                    <option value="1403">1403</option>
-                    <option value="1404">1404</option>
-                    <option value="1405">1405</option>
-					<option value="1406">1406</option>
-                    <option value="1407">1407</option>
-                    <option value="1408">1408</option>
-                    <option value="1409">1409</option>
-                    <option value="1410">1410</option>
-                </select>
-                <br>
-                <br>
-                <input type="text" id="owner_money" placeholder="مقدار تحول داده شده">
-                <br>
-                <br>
-                <input type="button" id="owner_btn" value="تایید">
-				<br>
-				<select id="osearchmonth">
-                    <option value="01">01</option>
-                    <option value="02">02</option>
-                    <option value="03">03</option>
-                    <option value="04">04</option>
-                    <option value="05">05</option>
-                    <option value="06">06</option>
-                    <option value="07">07</option>
-                    <option value="08">08</option>
-                    <option value="09">09</option>
-                    <option value="10">10</option>
-                    <option value="11">11</option>
-                    <option value="12">12</option>
-                </select>
-				    <select id="osearchyear">
-                    <option value="1403">1403</option>
-                    <option value="1404">1404</option>
-                    <option value="1405">1405</option>
-                    <option value="1406">1406</option>
-                    <option value="1407">1407</option>
-                    <option value="1408">1408</option>
-                    <option value="1409">1409</option>
-                    <option value="1410">1410</option>
-                </select>
-				<button id="osearch" class="button">
-				<span class="button-content">فلتر </span>
-				</button>
-				<p id='ototal' class="total">مجموع پول رسیده شده برای صاحب جایدات</p> 
-				
-               
-
-				<!-- Modal -->
+            <select id="osearchmonth">
+                <option value="01">۰۱</option>
+                <option value="02">۰۲</option>
+                <option value="03">۰۳</option>
+                <option value="04">۰۴</option>
+                <option value="05">۰۵</option>
+                <option value="06">۰۶</option>
+                <option value="07">۰۷</option>
+                <option value="08">۰۸</option>
+                <option value="09">۰۹</option>
+                <option value="10">۱۰</option>
+                <option value="11">۱۱</option>
+                <option value="12">۱۲</option>
+            </select>
+            <select id="osearchyear">
+                <option value="1403">۱۴۰۳</option>
+                <option value="1404">۱۴۰۴</option>
+                <option value="1405">۱۴۰۵</option>
+                <option value="1406">۱۴۰۶</option>
+                <option value="1407">۱۴۰۷</option>
+                <option value="1408">۱۴۰۸</option>
+                <option value="1409">۱۴۰۹</option>
+                <option value="1410">۱۴۱۰</option>
+            </select>
+            <button id="osearch" class="button">
+                <span class="button-content">فلتر </span>
+            </button>
+            <p id='ototal' class="total">مجموع پول رسیده شده برای صاحب جایدات</p>
 
 
-			
-	<div id="" style="overflow:scroll; height:330px;">
-		<table>
-			<thead>
-				<th>نمبر</th>
-				<th>تاریخ</th>
-				<th>مقدار پول</th>
-				<th>تائید مالک جایدات</th>
-	
-			</thead>
-			<tbody id="tbody2">
-	
-	
-			</tbody>
 
-		</table>
-				
-	</div>	
+            <!-- Modal -->
+
+
+            <br>
+            <br>
+            <div id="" style="overflow:scroll; height:70%;">
+                <table>
+                    <thead>
+                    <th>تاریخ</th>
+                    <th>مقدار پول</th>
+                    <th>تائید مالک جایدات</th>
+                    <th>
+                        <button class="btn btn-success ms-3" data-bs-toggle="modal" data-bs-target="#oactionModal" id="oadd-0">
+                            <i class="fa-solid fa-plus"></i>
+                    </th>
+
+                    </thead>
+                    <tbody id="tbody2">
+                    </tbody>
+
+                </table>
+
+            </div>
+            <div class="modal fade" id="oactionModal" tabindex="-1" aria-labelledby="actionLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <p class="modal-title fs-5" id="oactionLabel">Modal title</p>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="oex"><i class="fa-solid fa-xmark"></i></button>
+                        </div>
+                        <div class="modal-body">
+
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label"></label>
+                                <input type="text" class="form-control" id="omodids" />
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label"></label>تاریخ
+                                <select id="owner_day" name="owner_day">
+                                    <option value="01">۰۱</option>
+                                    <option value="02">۰۲</option>
+                                    <option value="03">۰۳</option>
+                                    <option value="04">۰۴</option>
+                                    <option value="05">۰۵</option>
+                                    <option value="06">۰۶</option>
+                                    <option value="07">۰۷</option>
+                                    <option value="08">۰۸</option>
+                                    <option value="09">۰۹</option>
+                                    <option value="10">۱۰</option>
+                                    <option value="11">۱۱</option>
+                                    <option value="12">۱۲</option>
+                                    <option value="13">۱۳</option>
+                                    <option value="14">۱۴</option>
+                                    <option value="15">۱۵</option>
+                                    <option value="16">۱۶</option>
+                                    <option value="17">۱۷</option>
+                                    <option value="18">۱۸</option>
+                                    <option value="19">۱۹</option>
+                                    <option value="20">۲۰</option>
+                                    <option value="21">۲۱</option>
+                                    <option value="22">۲۲</option>
+                                    <option value="23">۲۳</option>
+                                    <option value="24">۲۴</option>
+                                    <option value="25">۲۵</option>
+                                    <option value="26">۲۶</option>
+                                    <option value="27">۲۷</option>
+                                    <option value="28">۲۸</option>
+                                    <option value="29">۲۹</option>
+                                    <option value="30">۳۰</option>
+                                    <option value="31">۳۱</option>
+                                </select>
+                                <select id="owner_month" name="owner_month">
+                                    <option value="01">۰۱</option>
+                                    <option value="02">۰۲</option>
+                                    <option value="03">۰۳</option>
+                                    <option value="04">۰۴</option>
+                                    <option value="05">۰۵</option>
+                                    <option value="06">۰۶</option>
+                                    <option value="07">۰۷</option>
+                                    <option value="08">۰۸</option>
+                                    <option value="09">۰۹</option>
+                                    <option value="10">۱۰</option>
+                                    <option value="11">۱۱</option>
+                                    <option value="12">۱۲</option>
+                                </select>
+                                <select id="owner_year" name="owner_year">
+                                    <option value="1403">۱۴۰۳</option>
+                                    <option value="1404">۱۴۰۴</option>
+                                    <option value="1405">۱۴۰۵</option>
+                                    <option value="1406">۱۴۰۶</option>
+                                    <option value="1407">۱۴۰۷</option>
+                                    <option value="1408">۱۴۰۸</option>
+                                    <option value="1409">۱۴۰۹</option>
+                                    <option value="1410">۱۴۱۰</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label"></label>
+                                <input type="text" class="form-control" id="omodmoney" />
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label"></label>
+                                <input type="button" class="form-control" value="تائید" id="oditBtn" />
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
         </div>
 
 
@@ -606,120 +598,150 @@ margin-top: 10px;
 
         <div class="spend">
             <h2>مصارف</h2>
-                <label for="date">تاریخ</label>
-                <select id="spend_day" name="spend_day">
-                    <option value="01">01</option>
-                    <option value="02">02</option>
-                    <option value="03">03</option>
-                    <option value="04">04</option>
-                    <option value="05">05</option>
-                    <option value="06">06</option>
-                    <option value="07">07</option>
-                    <option value="08">08</option>
-                    <option value="09">09</option>
-                    <option value="10">10</option>
-                    <option value="11">11</option>
-                    <option value="12">12</option>
-                    <option value="13">13</option>
-                    <option value="14">14</option>
-                    <option value="15">15</option>
-                    <option value="16">16</option>
-                    <option value="17">17</option>
-                    <option value="18">18</option>
-                    <option value="19">19</option>
-                    <option value="20">20</option>
-                    <option value="21">21</option>
-                    <option value="22">22</option>
-                    <option value="23">23</option>
-                    <option value="24">24</option>
-                    <option value="25">25</option>
-                    <option value="26">26</option>
-                    <option value="27">27</option>
-                    <option value="28">28</option>
-                    <option value="29">29</option>
-                    <option value="30">30</option>
-                    <option value="31">31</option>
-                </select>
-                <select id="spend_month" name="spend_month">
-                    <option value="01">01</option>
-                    <option value="02">02</option>
-                    <option value="03">03</option>
-                    <option value="04">04</option>
-                    <option value="05">05</option>
-                    <option value="06">06</option>
-                    <option value="07">07</option>
-                    <option value="80">08</option>
-                    <option value="09">09</option>
-                    <option value="10">10</option>
-                    <option value="11">11</option>
-                    <option value="12">12</option>
-                </select>
-                <select id="spend_year" name="spend_year">
-                    <option value="1403">1403</option>
-                    <option value="1404">1404</option>
-                    <option value="1405">1405</option>
-                    <option value="1406">1406</option>
-                    <option value="1407">1407</option>
-                    <option value="1408">1408</option>
-                    <option value="1409">1409</option>
-                    <option value="1410">1410</option>
-                </select>
-                <br>
-                <br>
-                <input id="spend_money" type="text" placeholder="مقدار پول">
-                <br>
-                <br>
-                <textarea id="info" type="text" placeholder="معلومات پول مصرف شده"></textarea>
-                <input id="spend_btn" type="button" value="تایید">
-				<br>
-				<select id="ssearchmonth">
-                    <option value="01">01</option>
-                    <option value="02">02</option>
-                    <option value="03">03</option>
-                    <option value="04">04</option>
-                    <option value="05">05</option>
-                    <option value="06">06</option>
-                    <option value="07">07</option>
-                    <option value="08">08</option>
-                    <option value="09">09</option>
-                    <option value="10">10</option>
-                    <option value="11">11</option>
-                    <option value="12">12</option>
-                </select>
-				    <select id="ssearchyear">
-                    <option value="1403">1403</option>
-                    <option value="1404">1404</option>
-                    <option value="1405">1405</option>
-                    <option value="1406">1406</option>
-                    <option value="1407">1407</option>
-                    <option value="1408">1408</option>
-                    <option value="1409">1409</option>
-                    <option value="1410">1410</option>
-                </select>
-				<button id="ssearch" class="button">
-				<span class="button-content">فلتر </span>
-				</button>
-				<p id='stotal' class="total">مجموع پول خرج شده</p> 
-				
-	<div id="" style="overflow:scroll; height:330px;">
-		<table>
-			<thead>
-				<th>نمبر</th>
-				<th>معلومات</th>
-				<th>تاریخ</th>
-				<th>مقدار پول</th>
-				<th>تائید مالک جایدات</th>
-				
-	
-			</thead>
-			<tbody id="tbody3">
-	
-	
-			</tbody>
+          
+            <select id="ssearchmonth">
+                <option value="01">۰۱</option>
+                <option value="02">۰۲</option>
+                <option value="03">۰۳</option>
+                <option value="04">۰۴</option>
+                <option value="05">۰۵</option>
+                <option value="06">۰۶</option>
+                <option value="07">۰۷</option>
+                <option value="08">۰۸</option>
+                <option value="09">۰۹</option>
+                <option value="10">۱۰</option>
+                <option value="11">۱۱</option>
+                <option value="12">۱۲</option>
+            </select>
+            <select id="ssearchyear">
+                <option value="1403">۱۴۰۳</option>
+                <option value="1404">۱۴۰۴</option>
+                <option value="1405">۱۴۰۵</option>
+                <option value="1406">۱۴۰۶</option>
+                <option value="1407">۱۴۰۷</option>
+                <option value="1408">۱۴۰۸</option>
+                <option value="1409">۱۴۰۹</option>
+                <option value="1410">۱۴۱۰</option>
+            </select>
+            <button id="ssearch" class="button">
+                <span class="button-content">فلتر </span>
+            </button>
+            <p id='stotal' class="total">مجموع پول خرج شده</p>
+            <br>
+            <br>
+            <div id="" style="overflow:scroll; height:70%;">
+                <table>
+                    <thead>
+                    <th>معلومات</th>
+                    <th>تاریخ</th>
+                    <th>مقدار پول</th>
+                    <th>تائید مالک جایدات</th>
+                    <th>
+                        <button class="btn btn-success ms-3" data-bs-toggle="modal" data-bs-target="#sactionModal" id="sadd-0">
+                            <i class="fa-solid fa-plus"></i>
+                    </th>
 
-		</table>
-				
-	</div>	
+                    </thead>
+                    <tbody id="tbody3">
+                    </tbody>
+
+                </table>
+
+            </div>
+            <div class="modal fade" id="sactionModal" tabindex="-1" aria-labelledby="actionLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <p class="modal-title fs-5" id="sactionLabel">Modal title</p>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="sex"><i class="fa-solid fa-xmark"></i></button>
+                        </div>
+                        <div class="modal-body">
+
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label"></label>
+                                <input type="text" class="form-control" id="smodids" />
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label"></label>تاریخ
+                                <select id="spend_day" name="spend_day">
+                                    <option value="01">۰۱</option>
+                                    <option value="02">۰۲</option>
+                                    <option value="03">۰۳</option>
+                                    <option value="04">۰۴</option>
+                                    <option value="05">۰۵</option>
+                                    <option value="06">۰۶</option>
+                                    <option value="07">۰۷</option>
+                                    <option value="08">۰۸</option>
+                                    <option value="09">۰۹</option>
+                                    <option value="10">۱۰</option>
+                                    <option value="11">۱۱</option>
+                                    <option value="12">۱۲</option>
+                                    <option value="13">۱۳</option>
+                                    <option value="14">۱۴</option>
+                                    <option value="15">۱۵</option>
+                                    <option value="16">۱۶</option>
+                                    <option value="17">۱۷</option>
+                                    <option value="18">۱۸</option>
+                                    <option value="19">۱۹</option>
+                                    <option value="20">۲۰</option>
+                                    <option value="21">۲۱</option>
+                                    <option value="22">۲۲</option>
+                                    <option value="23">۲۳</option>
+                                    <option value="24">۲۴</option>
+                                    <option value="25">۲۵</option>
+                                    <option value="26">۲۶</option>
+                                    <option value="27">۲۷</option>
+                                    <option value="28">۲۸</option>
+                                    <option value="29">۲۹</option>
+                                    <option value="30">۳۰</option>
+                                    <option value="31">۳۱</option>
+                                </select>
+                                <select id="spend_month" name="spend_month">
+                                    <option value="01">۰۱</option>
+                                    <option value="02">۰۲</option>
+                                    <option value="03">۰۳</option>
+                                    <option value="04">۰۴</option>
+                                    <option value="05">۰۵</option>
+                                    <option value="06">۰۶</option>
+                                    <option value="07">۰۷</option>
+                                    <option value="08">۰۸</option>
+                                    <option value="09">۰۹</option>
+                                    <option value="10">۱۰</option>
+                                    <option value="11">۱۱</option>
+                                    <option value="12">۱۲</option>
+                                </select>
+                                <select id="spend_year" name="spend_year">
+                                    <option value="1403">۱۴۰۳</option>
+                                    <option value="1404">۱۴۰۴</option>
+                                    <option value="1405">۱۴۰۵</option>
+                                    <option value="1406">۱۴۰۶</option>
+                                    <option value="1407">۱۴۰۷</option>
+                                    <option value="1408">۱۴۰۸</option>
+                                    <option value="1409">۱۴۰۹</option>
+                                    <option value="1410">۱۴۱۰</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label"></label>
+                                <input type="text" class="form-control" id="smodmoney" />
+                            </div>
+                            <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label"></label>
+                            <textarea id="info" type="text" placeholder="معلومات پول مصرف شده"></textarea>
+                        </div>
+                            
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label"></label>
+                                <input type="button" class="form-control" value="تائید" id="sditBtn" />
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -768,7 +790,7 @@ const firestore = firebase.firestore();
         });
 		onAuthStateChanged(auth, (user) => {
   if (user) {
-	  
+	 
 	  
   }else{
 	   location.replace("./index.html");
