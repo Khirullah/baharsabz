@@ -15,58 +15,79 @@
 
 <body>
 
-  <div class="container">
-    <input type="checkbox" id="check">
-    <div class="login form">
-      <header>ورود به سیستم</header>
-      <form action="#">
-        <input type="text" id='inUsr' placeholder="ایمیل خود را درج نمایید">
-        <input type="password" id="inPass" placeholder=" رمز عبور را درج نمایید">
-        <span class="signup">
-          <a href="#" id="forgotLabel">بازیابی رمز عبور؟</a>
-        </span>
-        <input type="button" class="button loginbtn" value="وارد شوید">
-      </form>
-      <div class="signup">
-        <span class="signup">راجستر نشده اید؟
-          <a href="#" id="signupLabel">راجستر</a>
-        </span>
-      </div>
+    <div class="container">
+        <input type="checkbox" id="check">
+        <div class="login form">
+            <header>ورود به سیستم</header>
+            <form action="#">
+                <input type="text" id='inUsr' placeholder="ایمیل خود را درج نمایید">
+                <input type="password" id="inPass" placeholder=" رمز عبور را درج نمایید">
+                <span class="signup">
+                    <a href="#" id="forgotLabel">بازیابی رمز عبور؟</a>
+                </span>
+                <input type="button" class="button loginbtn" value="وارد شوید">
+            </form>
+            <div class="signup">
+                <span class="signup">
+                    راجستر نشده اید؟
+                    <a href="#" id="signupLabel">راجستر</a>
+                </span>
+            </div>
+        </div>
+        <div class="registration form">
+            <header>راجستر</header>
+            <form action="#">
+                <input type="text" id="name" placeholder="اسم">
+                <input type="text" id='username' placeholder="تخلص">
+                <input type="text" id='email' placeholder="ایمیل خود را درج نمایید">
+                <input type="password" id='password' placeholder="رمز عبور">
+                <input type="button" class="button signupbtn" value="راجستر">
+            </form>
+            <div class="signup">
+                <span class="signup">
+                    اکونت دارید؟
+                    <a href="#" id="loginLabel">صحفه ورود</a>
+                </span>
+            </div>
+        </div>
+        <div class="forgot form">
+            <header>رمز عبور فراموش شده</header>
+            <form action="#">
+                <input type="text" id='forgotinp' placeholder="ایمیل خود را درج نمایید">
+                <input type="button" class="button forgotbtn" value="تائید">
+            </form>
+            <div class="signup">
+                <span class="signup">
+                    اکونت ندارید؟
+                    <a href="#" id="signupLabel">راجستر</a>
+                </span>
+            </div>
+            <div class="signup">
+                <span class="signup">
+                    اکونت دارید؟
+                    <a href="#" id="loginLabel">صحفه ورود</a>
+                </span>
+            </div>
+        </div>
     </div>
-    <div class="registration form">
-      <header>راجستر</header>
-      <form action="#">
-        <input type="text" id="name" placeholder="اسم">
-        <input type="text" id='username' placeholder="تخلص">
-        <input type="text" id='email' placeholder="ایمیل خود را درج نمایید">
-        <input type="password" id='password' placeholder="رمز عبور">
-        <input type="button" class="button signupbtn" value="راجستر">
-      </form>
-      <div class="signup">
-        <span class="signup">اکونت دارید؟
-          <a href="#" id="loginLabel">صحفه ورود</a>
-        </span>
-      </div>
-    </div>
-    <div class="forgot form" >
-      <header>رمز عبور فراموش شده</header>
-      <form action="#">
-        <input type="text" id='forgotinp' placeholder="ایمیل خود را درج نمایید">
-        <input type="button" class="button forgotbtn" value="تائید">
-      </form>
-      <div class="signup">
-        <span class="signup">اکونت ندارید؟
-          <a href="#" id="signupLabel">راجستر</a>
-        </span>
-      </div>
-      <div class="signup">
-        <span class="signup">اکونت دارید؟
-          <a href="#" id="loginLabel">صحفه ورود</a>
-        </span>
-      </div>
-    </div>
-  </div>
 
+
+    <script type="module">
+import { onAuthStateChanged, getAuth} from "https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
+import { getDatabase, ref, set, child, get, onValue, push, update, query, orderByChild, onChildAdded, limitToFirst, limitToLast,
+startAt, startAfter, endAt, endBefore, equalTo} from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
+import {firebaseConfig} from './js/config.js';
+const auth = firebase.auth();
+		onAuthStateChanged(auth, (user) => {
+  if (user) {
+	 location.replace("./client.html");
+	  
+  }else{
+	  
+  }
+		})
+        </script>
 
 </body>
 </html>
