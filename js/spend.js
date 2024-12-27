@@ -1,1 +1,372 @@
-const _0x5297b5=_0x2b03;(function(_0x252121,_0x53c82f){const _0x41c047=_0x2b03,_0x51e095=_0x252121();while(!![]){try{const _0x249f31=parseInt(_0x41c047(0xbd))/0x1+parseInt(_0x41c047(0x9b))/0x2*(parseInt(_0x41c047(0xb6))/0x3)+-parseInt(_0x41c047(0x9a))/0x4+-parseInt(_0x41c047(0x99))/0x5*(-parseInt(_0x41c047(0x90))/0x6)+parseInt(_0x41c047(0x83))/0x7*(-parseInt(_0x41c047(0xc0))/0x8)+parseInt(_0x41c047(0xa4))/0x9*(parseInt(_0x41c047(0x97))/0xa)+-parseInt(_0x41c047(0x8a))/0xb;if(_0x249f31===_0x53c82f)break;else _0x51e095['push'](_0x51e095['shift']());}catch(_0x3feae3){_0x51e095['push'](_0x51e095['shift']());}}}(_0x455c,0x71107));import{onAuthStateChanged,getAuth}from'https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js';function _0x455c(){const _0x140981=['dateday','money','24chsqfu','datemonth','floor','spend','selectedIndex','rows','stotal','1561294lVjNdp','spend_money','value','#aA','push','getElementById','خیر','993146tiyHjm','<br>','click','uid','1410','load','258qagArb','length','key','ماه\x20\x20','/spend','createElement','location','620ZXWMDr','log','64945oGgweC','2557380nvxwYn','2nHbhmK','spend_month','ssearchy','ssearchmonth','0123456789','val','reload','then','ssearch','109764sZDKXc','1406','ssearchyear','append','1403','random','ssearchm','auth','addEventListener','info','سال\x20','indexOf','child','forEach','innerHTML','tbody3','1404','1407','190419xsTkbI','spend_year','1409','abcdefghijklmnopqrstuvwxyz','به\x20مقدار','cells','firestore','483716sOdbpo'];_0x455c=function(){return _0x140981;};return _0x455c();}import{initializeApp}from'https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js';import{getDatabase,ref,set,child,get,onValue,push,update,query,orderByChild,onChildAdded,limitToFirst,limitToLast,startAt,startAfter,endAt,endBefore,equalTo}from'https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js';import{firebaseConfig}from'./config.js';const firebaseApps=initializeApp(firebaseConfig),auth=firebase[_0x5297b5(0xab)](),firestore=firebase[_0x5297b5(0xbc)]();function _0x2b03(_0x154ace,_0x537f27){const _0x455c1e=_0x455c();return _0x2b03=function(_0x2b030f,_0x57b734){_0x2b030f=_0x2b030f-0x82;let _0x5a4f3d=_0x455c1e[_0x2b030f];return _0x5a4f3d;},_0x2b03(_0x154ace,_0x537f27);}onAuthStateChanged(auth,_0x174842=>{const _0x18fc0e=_0x5297b5;if(_0x174842){let _0x2c5d69=_0x18fc0e(0x89);const _0x217618=_0x174842[_0x18fc0e(0x8d)],_0xf377c6=getDatabase(),_0x72928=getAuth();function _0x541c78(_0x18f360,_0x33c7e0){const _0x4673cf=_0x18fc0e;var _0xeda347='';if(_0x33c7e0[_0x4673cf(0xaf)]('a')>-0x1)_0xeda347+=_0x4673cf(0xb9);if(_0x33c7e0[_0x4673cf(0xaf)]('A')>-0x1)_0xeda347+='ABCDEFGHIJKLMNOPQRSTUVWXYZ';if(_0x33c7e0[_0x4673cf(0xaf)]('#')>-0x1)_0xeda347+=_0x4673cf(0x9f);var _0x56161f='';for(var _0x1cf877=_0x18f360;_0x1cf877>0x0;--_0x1cf877)_0x56161f+=_0xeda347[Math[_0x4673cf(0xc2)](Math[_0x4673cf(0xa9)]()*_0xeda347['length'])];return _0x56161f;}const _0x26a272=_0x541c78(0x20,_0x18fc0e(0x86)),_0x4a7039=document[_0x18fc0e(0x88)]('spend_btn');_0x4a7039[_0x18fc0e(0xac)](_0x18fc0e(0x8c),()=>{const _0x2b2e03=_0x18fc0e,_0x549556=document[_0x2b2e03(0x88)]('spend_day')[_0x2b2e03(0x85)],_0x5d8e1b=document['getElementById'](_0x2b2e03(0x9c))[_0x2b2e03(0x85)],_0x176594=document['getElementById'](_0x2b2e03(0xb7))[_0x2b2e03(0x85)],_0x4fc44f=document[_0x2b2e03(0x88)](_0x2b2e03(0x84))[_0x2b2e03(0x85)],_0x5de4a9=document[_0x2b2e03(0x88)](_0x2b2e03(0xad))[_0x2b2e03(0x85)];let _0x3646b6=parseInt(_0x4fc44f);update(ref(_0xf377c6,_0x217618+'/'+_0x2b2e03(0xc3)+'/'+_0x176594+'/'+_0x5d8e1b+'/'+_0x26a272),{'info':_0x5de4a9,'money':_0x3646b6,'dateday':_0x549556,'datemonth':_0x5d8e1b,'dateyear':_0x176594,'is':_0x2c5d69,'ids':_0x26a272}),window[_0x2b2e03(0x96)][_0x2b2e03(0xa1)]();});const _0x24b93b=ref(_0xf377c6,_0x217618+_0x18fc0e(0x94));onValue(_0x24b93b,_0x26240a=>{const _0x4d0b50=_0x18fc0e;_0x26240a[_0x4d0b50(0xb1)](_0x5943f4=>{const _0x34da29=_0x4d0b50,_0x2bad0c=_0x5943f4[_0x34da29(0x92)],_0xf85836=_0x5943f4[_0x34da29(0xa0)]('money');});});const _0x565452=document[_0x18fc0e(0x88)](_0x18fc0e(0xa3));_0x565452['addEventListener'](_0x18fc0e(0x8c),()=>{const _0x1e066d=_0x18fc0e;var _0x4fabb0=document['getElementById'](_0x1e066d(0x9e))[_0x1e066d(0x85)],_0xae0a35=document[_0x1e066d(0x88)](_0x1e066d(0xa6))['value'];update(ref(_0xf377c6,_0x217618+'/'+_0x1e066d(0xc3)),{'ssearchm':_0x4fabb0,'ssearchy':_0xae0a35});function _0x1c2b04(){const _0x20ccc4=_0x1e066d,_0x3a9777=query(ref(_0xf377c6,_0x217618+'/spend'+'/'+_0xae0a35),orderByChild(_0x4fabb0));get(_0x3a9777)[_0x20ccc4(0xa2)](_0x148699=>{const _0x2db907=_0x20ccc4;var _0x150eb8=[];_0x148699[_0x2db907(0xb1)](_0x2dd80f=>{const _0x50040e=_0x2db907;_0x150eb8['push'](_0x2dd80f[_0x50040e(0xa0)]());}),console[_0x2db907(0x98)](_0x150eb8);});}let _0x11c224=[],_0x669d52=0x0,_0x1e6a52=document[_0x1e066d(0x88)](_0x1e066d(0xb3));const _0x312392=()=>{const _0x1727fe=ref(_0xf377c6);get(child(_0x1727fe,_0x217618+'/spend'))['then'](_0x44f42a=>{const _0x3af94f=_0x2b03;_0x11c224=[],_0x44f42a[_0x3af94f(0xb1)](_0x2acfdb=>{const _0x3bfe7c=_0x3af94f;_0x11c224['push'](_0x2acfdb[_0x3bfe7c(0xa0)]());}),_0x50c788();});},_0x3748dc=()=>{const _0x350f01=_0x1e066d,_0x819aff=ref(_0xf377c6,_0x217618+_0x350f01(0x94)+'/'+_0xae0a35+'/'+_0x4fabb0);onValue(_0x819aff,_0x199280=>{const _0x33c951=_0x350f01;_0x11c224=[],_0x199280[_0x33c951(0xb1)](_0x37ff4b=>{const _0x3cf798=_0x33c951;_0x11c224[_0x3cf798(0x87)](_0x37ff4b[_0x3cf798(0xa0)]());}),_0x50c788();var _0x15364b=document[_0x33c951(0x88)](_0x33c951(0xb3)),_0x440301=0x0;for(var _0x3e8ee3=0x0;_0x3e8ee3<_0x15364b[_0x33c951(0xc5)][_0x33c951(0x91)];_0x3e8ee3++){_0x440301=_0x440301+parseInt(_0x15364b[_0x33c951(0xc5)][_0x3e8ee3][_0x33c951(0xbb)][0x3][_0x33c951(0xb2)]);}let _0x2992d9=document[_0x33c951(0x88)](_0x33c951(0x82));_0x2992d9[_0x33c951(0xb2)]=_0x33c951(0xba)+_0x440301+_0x33c951(0x93)+_0x4fabb0+'\x20'+_0x33c951(0xae)+_0xae0a35,console['log'](_0x440301);});},_0x34116a=(_0x1ef1a5,_0x4dce65,_0x487aa3,_0x12c622,_0x5b77f7,_0x330d24)=>{const _0x2fa00c=_0x1e066d;let _0x2da15f=document[_0x2fa00c(0x95)]('tr'),_0x90a35=document[_0x2fa00c(0x95)]('td'),_0x136f0e=document[_0x2fa00c(0x95)]('td'),_0x531800=document['createElement']('td'),_0x57510a=document[_0x2fa00c(0x95)]('td'),_0x2b5af4=document['createElement']('td');_0x90a35['innerHTML']=++_0x669d52,_0x136f0e[_0x2fa00c(0xb2)]=_0x1ef1a5,_0x531800[_0x2fa00c(0xb2)]=_0x4dce65+'/'+_0x487aa3+'/'+_0x12c622,_0x57510a['innerHTML']=_0x5b77f7,_0x2b5af4[_0x2fa00c(0xb2)]=_0x330d24,_0x2da15f[_0x2fa00c(0xa7)](_0x90a35,_0x136f0e,_0x531800,_0x57510a,_0x2b5af4),_0x1e6a52[_0x2fa00c(0xa7)](_0x2da15f);},_0x50c788=()=>{const _0x432050=_0x1e066d;return _0x669d52=0x0,_0x1e6a52[_0x432050(0xb2)]='',_0x11c224[_0x432050(0xb1)](_0x52437a=>{const _0x84bb9b=_0x432050;_0x34116a(_0x52437a[_0x84bb9b(0xad)],_0x52437a[_0x84bb9b(0xbe)],_0x52437a[_0x84bb9b(0xc1)],_0x52437a['dateyear'],_0x52437a[_0x84bb9b(0xbf)],_0x52437a['is']);var _0x1dd309=_0x52437a['money'],_0x2c9132=_0x1dd309['toString'](),_0x2728d1='';for(var _0x8bfd23=0x0;_0x8bfd23<_0x2c9132[_0x84bb9b(0x91)];_0x8bfd23++){_0x2728d1+=_0x2c9132[_0x8bfd23],_0x84bb9b(0x8b);}}),onValue(ref(_0xf377c6,_0x217618+_0x432050(0x94)),_0x37ea0d=>{const _0x165a86=_0x432050,_0x1fba77=_0x37ea0d[_0x165a86(0xa0)]()&&_0x37ea0d[_0x165a86(0xa0)]()[_0x165a86(0xbf)];});};window['addEventListener'](_0x1e066d(0x8f),_0x3748dc());});const _0x5b1350=()=>{const _0x449007=ref(_0xf377c6,_0x217618);onValue(_0x449007,_0x13e8cd=>{const _0x1416db=_0x2b03;_0x13e8cd[_0x1416db(0xb1)](_0x150688=>{const _0xe3cdb0=_0x1416db;let _0x9598f=_0x150688[_0xe3cdb0(0xb0)](_0xe3cdb0(0xaa))[_0xe3cdb0(0xa0)](),_0x4e1051=_0x150688[_0xe3cdb0(0xb0)](_0xe3cdb0(0x9d))[_0xe3cdb0(0xa0)]();if(_0x9598f==='01')document[_0xe3cdb0(0x88)](_0xe3cdb0(0x9e))[_0xe3cdb0(0xc4)]=0x0;else{if(_0x9598f=='02')document[_0xe3cdb0(0x88)](_0xe3cdb0(0x9e))[_0xe3cdb0(0xc4)]=0x1;else{if(_0x9598f=='03')document[_0xe3cdb0(0x88)](_0xe3cdb0(0x9e))['selectedIndex']=0x2;else{if(_0x9598f=='04')document['getElementById']('ssearchmonth')[_0xe3cdb0(0xc4)]=0x3;else{if(_0x9598f=='05')document[_0xe3cdb0(0x88)](_0xe3cdb0(0x9e))[_0xe3cdb0(0xc4)]=0x4;else{if(_0x9598f=='06')document[_0xe3cdb0(0x88)]('ssearchmonth')['selectedIndex']=0x5;else{if(_0x9598f=='07')document[_0xe3cdb0(0x88)](_0xe3cdb0(0x9e))[_0xe3cdb0(0xc4)]=0x6;else{if(_0x9598f=='08')document[_0xe3cdb0(0x88)](_0xe3cdb0(0x9e))['selectedIndex']=0x7;else{if(_0x9598f=='09')document[_0xe3cdb0(0x88)](_0xe3cdb0(0x9e))[_0xe3cdb0(0xc4)]=0x8;else{if(_0x9598f=='10')document[_0xe3cdb0(0x88)](_0xe3cdb0(0x9e))['selectedIndex']=0x9;else{if(_0x9598f=='11')document[_0xe3cdb0(0x88)](_0xe3cdb0(0x9e))[_0xe3cdb0(0xc4)]=0xa;else _0x9598f=='12'&&(document[_0xe3cdb0(0x88)](_0xe3cdb0(0x9e))['selectedIndex']=0xb);}}}}}}}}}}if(_0x4e1051==_0xe3cdb0(0xa8))document[_0xe3cdb0(0x88)](_0xe3cdb0(0xa6))[_0xe3cdb0(0xc4)]=0x0;else{if(_0x4e1051==_0xe3cdb0(0xb4))document[_0xe3cdb0(0x88)]('ssearchyear')['selectedIndex']=0x1;else{if(_0x4e1051=='1405')document[_0xe3cdb0(0x88)](_0xe3cdb0(0xa6))[_0xe3cdb0(0xc4)]=0x2;else{if(_0x4e1051==_0xe3cdb0(0xa5))document[_0xe3cdb0(0x88)]('ssearchyear')['selectedIndex']=0x3;else{if(_0x4e1051==_0xe3cdb0(0xb5))document['getElementById']('ssearchyear')[_0xe3cdb0(0xc4)]=0x4;else{if(_0x4e1051=='1408')document[_0xe3cdb0(0x88)]('ssearchyear')[_0xe3cdb0(0xc4)]=0x5;else{if(_0x4e1051==_0xe3cdb0(0xb8))document[_0xe3cdb0(0x88)](_0xe3cdb0(0xa6))[_0xe3cdb0(0xc4)]=0x6;else _0x4e1051==_0xe3cdb0(0x8e)&&(document[_0xe3cdb0(0x88)](_0xe3cdb0(0xa6))[_0xe3cdb0(0xc4)]=0x7);}}}}}}document[_0xe3cdb0(0x88)]('ssearch')[_0xe3cdb0(0x8c)]();});});};window[_0x18fc0e(0xac)](_0x18fc0e(0x8f),_0x5b1350());}});
+import { onAuthStateChanged, getAuth} from "https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
+import { getDatabase, ref, set, child, get, onValue, push, update, query, orderByChild, onChildAdded, limitToFirst, limitToLast, 
+startAt, startAfter, endAt, endBefore, equalTo} from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
+import {firebaseConfig} from './config.js';
+//const firebaseApp = firebase.initializeApp(firebaseConfig);
+const firebaseApps = initializeApp(firebaseConfig);
+const auth = firebase.auth();
+const firestore = firebase.firestore();
+
+onAuthStateChanged(auth, (user) => {
+  if (user) {
+	let a = "خیر";
+	const uid = user.uid;
+    //console.log(uid);
+	const db = getDatabase();
+	const auths = getAuth();
+	function randomString(length, chars) {
+    var mask = '';
+    if (chars.indexOf('a') > -1) mask += 'abcdefghijklmnopqrstuvwxyz';
+    if (chars.indexOf('A') > -1) mask += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    if (chars.indexOf('#') > -1) mask += '0123456789';
+    var result = '';
+    for (var i = length; i > 0; --i) result += mask[Math.floor(Math.random() * mask.length)];
+    return result;
+}
+const ranuid = randomString(32, '#aA');
+
+//const topUserPostsRef = query(ref(db, uid), orderByChild('name'));
+//console.log(topUserPostsRef)
+
+const dbRef = ref(db, uid + '/spend');
+
+onValue(dbRef, (snapshot) => {
+  snapshot.forEach((childSnapshot) => {
+    const childKey = childSnapshot.key;
+    const childData = childSnapshot.val('money');
+    // ...
+	//console.log(childKey);
+	//console.log(childData);
+
+
+	//document.getElementById('name').innerHTML =  childData;
+	
+	
+
+  });
+});
+const ssearch = document.getElementById('ssearch');
+ssearch.addEventListener('click', () => {
+	var ssearchmonth = document.getElementById('ssearchmonth').value;
+	var ssearchyear = document.getElementById('ssearchyear').value;
+		update(ref(db, uid + "/" + "spend"),{
+			ssearchm: ssearchmonth,
+			ssearchy: ssearchyear,
+	},);
+
+function GetAllDataOnce(){
+	const que = query(ref(db, uid + '/spend' + '/' + ssearchyear ), orderByChild(ssearchmonth));
+	
+	get(que).then((snapshot)=>{
+		var data = [];
+		
+		snapshot.forEach(childSnapshot =>{
+			data.push(childSnapshot.val());
+		});
+		console.log(data)
+	
+	})
+}
+let spendlist = [];
+let sno = 0;
+let tbody = document.getElementById('tbody3');
+const selectAllDataOnce = () =>{
+	const dbRefs = ref(db);
+	get(child(dbRefs, uid + '/spend')).then((snapshot)=>{
+		spendlist = [];
+		snapshot.forEach(spend =>{
+			spendlist.push(spend.val());
+			
+		});
+		AddAllRecords();
+	
+	})
+
+}
+
+String.prototype.toEnglishDigits = function () {
+    var persian = { '۰': '0', '۱': '1', '۲': '2', '۳': '3', '۴': '4', '۵': '5', '۶': '6', '۷': '7', '۸': '8', '۹': '9' };
+    var arabic = { '٠': '0', '١': '1', '٢': '2', '٣': '3', '٤': '4', '٥': '5', '٦': '6', '٧': '7', '٨': '8', '٩': '9' };
+    return this.replace(/[^0-9.]/g, function (w) {
+        return persian[w] || arabic[w] || w;
+    });
+};
+String.prototype.toPersianDigits = function () {
+    //var persian = { '۰': '0', '۱': '1', '۲': '2', '۳': '3', '۴': '4', '۵': '5', '۶': '6', '۷': '7', '۸': '8', '۹': '9' };
+    var persian = {'0': '۰', '1': '۱', '2': '۲', '3': '۳','4': '۴', '5': '۵', '6': '۶', '7': '۷', '8': '۸', '9': '۹' };
+    //var arabic = { '٠': '0', '١': '1', '٢': '2', '٣': '3', '٤': '4', '٥': '5', '٦': '6', '٧': '7', '٨': '8', '٩': '9' };
+    return this.replace(/[^۰-۹.]/g, function (w) {
+        return persian[w] || w;
+    });
+};
+const selectAllDataRealtime = () =>{
+	const dbRefs = ref(db, uid + '/spend' + '/' + ssearchyear + '/' + ssearchmonth);
+	onValue(dbRefs, (snapshot) => {
+		spendlist = [];
+		snapshot.forEach(spend =>{
+			spendlist.push(spend.val());
+			//let toint = shop.child("is").val();
+			//let total = parseInt(toint);
+			//console.log(total)
+		});
+	
+
+		
+		AddAllRecords();
+		var table = document.getElementById("tbody3"), sumVal = 0;
+            
+            for(var i = 0; i < table.rows.length; i++)
+            {
+                //sumVal = sumVal + parseInt(table.rows[i].cells[2].innerHTML);
+				var aa = table.rows[i].cells[2].innerHTML.toEnglishDigits();
+				var aaa = parseInt(aa);
+                sumVal = sumVal + aaa;
+            }
+            var a = sumVal.toString();
+            //document.getElementById("val").innerHTML = "Sum Value = " + sumVal;
+			let stotal = document.getElementById('stotal');
+			stotal.innerHTML = 'به مقدار' + a.toPersianDigits().bold() + 'ماه  ' + ssearchmonth.toPersianDigits() + ' ' + 'سال ' + ssearchyear.toPersianDigits();
+            //console.log(sumVal);
+	
+	})
+
+}
+const AddSingleRecords = (info, dateday, datemonth, dateyear, money, is) => {
+	let trow = document.createElement('tr');
+	let td1 = document.createElement('td');
+	let td2 = document.createElement('td');
+	let td3 = document.createElement('td');
+	let td4 = document.createElement('td');
+	let td5 = document.createElement('td');
+	
+	
+	
+	td1.innerHTML = ++sno;
+	td2.innerHTML = info;
+	td3.innerHTML = dateday.toPersianDigits() + '/' + datemonth.toPersianDigits() + '/' + dateyear.toPersianDigits();
+	td4.innerHTML = money.toPersianDigits();
+	td5.innerHTML = is;
+	
+	trow.append(td2,td3,td4,td5);
+	
+	tbody.append(trow);
+	
+
+}
+const AddAllRecords = () =>{
+	sno=0;
+	tbody.innerHTML = ""; 
+	spendlist.forEach(spend =>{
+		AddSingleRecords(spend.info, spend.dateday, spend.datemonth, spend.dateyear, spend.money, spend.is);
+
+ //document.getElementById("see").innerText += text + '\n';
+ 
+
+//const jn = JSON.parse(text);('id: '+ text);
+  //console.log(text)
+  
+  //console.log(jn)
+
+	})
+		
+
+
+
+
+}
+
+
+let ex = document.getElementById('sex');
+let actionLabel = document.getElementById('sactionLabel');
+let sday = document.getElementById('spend_day');
+let smonth = document.getElementById('spend_month');
+let syear = document.getElementById('spend_year');
+let modmoney = document.getElementById('smodmoney');
+let modids = document.getElementById('smodids');
+let info = document.getElementById('info');
+let ditBtn = document.getElementById('sditBtn');
+let addBtn = document.getElementById('sadd-0');
+//let moodmo = modmoney.value.toPersianDigits()
+
+const LoadModal = (event) => {
+
+    var targetId = (event.target.id.length > 1 ) ? event.target.id : event.target.parentElement.id;
+
+    let string = targetId.split('-');
+    let mode = string[0];
+    let selectedIndex = string[1] - 1;
+
+
+	   if(mode==='sadd'){
+	   ditBtn.className = 'btn btn-lg btn-success';
+	   actionLabel.innerText = 'پول مصرف شده';
+	   ditBtn.innerText = 'Add';
+	   ditBtn.addEventListener('click', AddData);
+
+	   //modids.value = ranuid;
+	   sday.value = '';
+	   smonth.value = '';
+	   syear.value = '';
+	   modmoney.value = '';
+	   info.value = '';
+	   modmoney.placeholder = 'مقدار پول';
+   
+
+
+		modids.style.display = "none";
+        //modis.disabled = false;
+        modids.disabled = true;
+        sday.disabled = false;
+        smonth.disabled = false;
+        syear.disabled = false;
+        modmoney.disabled = false;
+        info.disabled = false;
+   }
+   }
+
+   const AddData = () => {
+	//actionBtn.disabled = true;
+	set(ref(db, uid + '/spend/' + syear.value + '/' + smonth.value + '/' + ranuid), {
+		info: info.value,
+		money: modmoney.value,
+		dateday: sday.value,
+		datemonth:  smonth.value,
+		dateyear: syear.value,
+		is: a,
+		ids: ranuid,
+
+	}).then(() => {
+		ex.click(); 
+	window.location.reload();
+})
+}
+
+
+window.addEventListener('load', selectAllDataRealtime());
+addBtn.addEventListener('click', LoadModal);
+//const topUserPostsRef = query(ref(db, uid + '/recived/2i2uzTCuNdznHqOroj6V7jreVeO8Y367'), orderByChild('money'));
+//console.log(topUserPostsRef)
+
+})
+
+
+
+    const sear = () =>{
+	const dbRefs = ref(db, uid);
+	onValue(dbRefs, (snapshot) => {
+		snapshot.forEach(spend =>{
+			let smon = spend.child("ssearchm").val();
+			let syea = spend.child("ssearchy").val();
+			switch(smon){
+				case '01':{
+					document.getElementById("ssearchmonth").selectedIndex = 0;
+					document.getElementById('ssearch').click();
+					break;
+				}
+				case '02':{
+					document.getElementById("ssearchmonth").selectedIndex = 1;
+					document.getElementById('ssearch').click();
+					break;
+				}
+				case '03':{
+					document.getElementById("ssearchmonth").selectedIndex = 2;
+					document.getElementById('ssearch').click();
+					break;
+				}
+				case '04':{
+					document.getElementById("ssearchmonth").selectedIndex = 3;
+					document.getElementById('ssearch').click();
+					break;
+				}
+				case '05':{
+					document.getElementById("ssearchmonth").selectedIndex = 4;
+					document.getElementById('ssearch').click();
+					break;
+				}
+				case '06':{
+					document.getElementById("ssearchmonth").selectedIndex = 5;
+					document.getElementById('ssearch').click();
+					break;
+				}
+				case '07':{
+					document.getElementById("ssearchmonth").selectedIndex = 6;
+					document.getElementById('ssearch').click();
+					break;
+				}
+				case '08':{
+					document.getElementById("ssearchmonth").selectedIndex = 7;
+					document.getElementById('ssearch').click();
+					break;
+				}
+				case '09':{
+					document.getElementById("ssearchmonth").selectedIndex = 8;
+					document.getElementById('ssearch').click();
+					break;
+				}
+				case '10':{
+					document.getElementById("ssearchmonth").selectedIndex = 9;
+					document.getElementById('ssearch').click();
+					break;
+				}
+				case '11':{
+					document.getElementById("ssearchmonth").selectedIndex = 10;
+					document.getElementById('ssearch').click();
+					break;
+				}
+				case '12':{
+					document.getElementById("ssearchmonth").selectedIndex = 11;
+					document.getElementById('ssearch').click();
+					break;
+				}
+				
+			}
+			switch(syea){
+				case '1403':{
+					document.getElementById("ssearchyear").selectedIndex = 0;
+					document.getElementById('ssearch').click();
+					break;
+				}
+				case '1404':{
+					document.getElementById("ssearchyear").selectedIndex = 1;
+					document.getElementById('ssearch').click();
+					break;
+				}
+				case '1405':{
+					document.getElementById("ssearchyear").selectedIndex = 2;
+					document.getElementById('ssearch').click();
+					break;
+				}
+				case '1406':{
+					document.getElementById("ssearchyear").selectedIndex = 3;
+					document.getElementById('ssearch').click();
+					break;
+				}
+				case '1407':{
+					document.getElementById("ssearchyear").selectedIndex = 4;
+					document.getElementById('ssearch').click();
+					break;
+				}
+				case '1408':{
+					document.getElementById("ssearchyear").selectedIndex = 5;
+					document.getElementById('ssearch').click();
+					break;
+				}
+				case '1409':{
+					document.getElementById("ssearchyear").selectedIndex = 6;
+					document.getElementById('ssearch').click();
+					break;
+				}
+				case '1410':{
+					document.getElementById("ssearchyear").selectedIndex = 7;
+					document.getElementById('ssearch').click();
+					break;
+				}
+			}
+		});
+	})
+}
+  window.addEventListener('load', sear());
+  }
+
+  })
